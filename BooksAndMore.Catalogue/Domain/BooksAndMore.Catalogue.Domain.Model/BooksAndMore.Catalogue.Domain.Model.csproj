@@ -40,7 +40,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Authors\Author.cs" />
+    <Compile Include="Books\Book.cs" />
+    <Compile Include="Books\Reviews\Review.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Publishers\Address.cs" />
+    <Compile Include="Publishers\Publisher.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BooksAndMore.Catalogue.Domain.Common\BooksAndMore.Catalogue.Domain.Common.csproj">
+      <Project>{86542779-4466-476f-9368-2b64e4375f00}</Project>
+      <Name>BooksAndMore.Catalogue.Domain.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
