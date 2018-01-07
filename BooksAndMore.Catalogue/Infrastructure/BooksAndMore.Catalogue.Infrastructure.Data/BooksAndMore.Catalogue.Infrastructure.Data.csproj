@@ -47,11 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BooksCatalogueContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\BooksAndMore.Catalogue.Domain.Model\BooksAndMore.Catalogue.Domain.Model.csproj">
+      <Project>{a30eb9b3-7a70-49bb-acf9-75e741ee9a47}</Project>
+      <Name>BooksAndMore.Catalogue.Domain.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
