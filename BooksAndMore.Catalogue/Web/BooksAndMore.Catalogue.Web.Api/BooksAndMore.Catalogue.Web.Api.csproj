@@ -135,6 +135,16 @@
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\BooksAndMore.Catalogue.Domain.Model\BooksAndMore.Catalogue.Domain.Model.csproj">
+      <Project>{a30eb9b3-7a70-49bb-acf9-75e741ee9a47}</Project>
+      <Name>BooksAndMore.Catalogue.Domain.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\BooksAndMore.Catalogue.Infrastructure.Data\BooksAndMore.Catalogue.Infrastructure.Data.csproj">
+      <Project>{35b2e10c-5ef3-474a-8203-8b8800dcac05}</Project>
+      <Name>BooksAndMore.Catalogue.Infrastructure.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

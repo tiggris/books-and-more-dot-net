@@ -1,6 +1,8 @@
+using BooksAndMore.Catalogue.Infrastructure.Data;
 using System;
-
 using Unity;
+using Unity.Injection;
+using Unity.Lifetime;
 
 namespace BooksAndMore.Catalogue.Web.Api
 {
@@ -42,6 +44,8 @@ namespace BooksAndMore.Catalogue.Web.Api
 
             // TODO: Register your type's mappings here.
             // container.RegisterType<IProductRepository, ProductRepository>();
+
+            container.RegisterType<BooksCatalogueContext>(new HierarchicalLifetimeManager(), new InjectionConstructor("BooksCatalogueDb"));
         }
     }
 }
