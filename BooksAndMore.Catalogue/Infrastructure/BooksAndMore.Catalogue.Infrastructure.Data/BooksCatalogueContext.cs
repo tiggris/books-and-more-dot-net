@@ -14,7 +14,17 @@ namespace BooksAndMore.Catalogue.Infrastructure.Data
         public BooksCatalogueContext(string nameOrConnectionString) :
             base(nameOrConnectionString)
         {
-            
+        }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Book>().HasMany(book => book.Authors).WithMany()
+                .Map(configuration => configuration
+                    .ToTable("BookAuthors")
+                    .MapLeftKey("BookId")
+                    .MapRightKey("AuthorId"));
         }
     }
 }

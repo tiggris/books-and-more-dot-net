@@ -48,6 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BooksCatalogueContext.cs" />
+    <Compile Include="BooksCatalogueContextFactory.cs" />
+    <Compile Include="Migrations\201801101949083_InitialCreate.cs" />
+    <Compile Include="Migrations\201801101949083_InitialCreate.Designer.cs">
+      <DependentUpon>201801101949083_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -59,6 +65,11 @@
       <Project>{a30eb9b3-7a70-49bb-acf9-75e741ee9a47}</Project>
       <Name>BooksAndMore.Catalogue.Domain.Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201801101949083_InitialCreate.resx">
+      <DependentUpon>201801101949083_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
